@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="notification">
+    <input type="text"
+          class="form-control"
+          (input)="onUpdateStudentName($event)">
+
+    <!--<input type="text"
+          class="form-control"
+          [(ngModel)]="studentNewName">
+
+    <input type="text"
+          class="form-control"
+          [ngModel]="studentNewName">-->
+
+    <p>{{ studentNewName }}</p>
+
+    <button type="button" class="btn btn-primary" [disabled]="!allowNewStudent" (click)="onCreateStudent()">Add Student</button>
+    <p *ngIf="studentCreated; else noStudent">Student created, student name is {{ studentNewName }}</p>
+
+    <ng-template #noStudent>
+      <p>No Student created!</p>
+    </ng-template>
+
+    <!--<p>Student Name: {{ studentName }} with ID: {{ studentId }}</p>
+    <p>Student Name: {{ onGetName() }} with ID: {{ onGetId() }}</p>-->
+    <!--
+    <p [ngStyle]="{ color: getColorStatus(studentStatus) }" [ngClass]="{ fontBold: studentStatus === 'จบแล้ว' ? true : false}">
+      Student Name: {{ studentName }}
+      with ID: {{ studentId }}
+      Status: {{ studentStatus }}</p>
+
+    <p [ngStyle]="{ color: studentStatus2 === 'จบแล้ว' ? 'green' : 'red' }">
+      Student Name: {{ studentName2 }}
+      with ID: {{ studentId2 }}
+      Status: {{ studentStatus2 }}</p>
+    -->
+
+    <p *ngFor="let item of studentList; let n = index;"
+      [ngStyle]="{ color: getColorStatus(item.studentStatus)}"
+      [ngClass]="{ fontBold: true }">
+        Index: {{ n }}
+        Student Name: {{ item.studentName }}
+        with ID: {{ item.studentId }}
+        Status: {{ item.studentStatus }}</p>
+
+    <p>button status : {{ allowNewStudent }}</p>
+    <!--<p  [innerText]="allowNewStudent"></p>-->
+    <p>{{ studentCreationStatus }}</p>
+    <hr>
+  </div>
+</div>

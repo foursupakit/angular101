@@ -1,0 +1,46 @@
+<!--
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <--logo-!->
+  <div class="navbar-brand">
+      <a class="navbar-item">
+        <img src="https://bulma.io/images/bulma-logo.png">
+      </a>
+    </div>
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav navbar-nav mr-auto">
+      <li routerLinkActive="active"><a class="nav-link" [routerLink]="['home']">Home</a></li>
+      <li routerLinkActive="active"><a class="nav-link" [routerLink]="['about']">About</a></li>
+      <li routerLinkActive="active"><a class="nav-link" [routerLink]="['contact']">Contact</a></li>
+      <li routerLinkActive="active"><a class="nav-link" [routerLink]="['student-system']">Student</a></li>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1">  <!--bulma requirement-->
+
+<div *ngIf="is404PageRoute(); else isHomeRoute">
+  <app-page404></app-page404>
+</div>
+
+<ng-template #isHomeRoute>
+
+  <app-section></app-section>
+
+  <body style="background-color: #fff;">
+    <router-outlet></router-outlet>
+  </body>
+
+  <app-scroll-top></app-scroll-top>
+
+  <app-footer></app-footer>
+</ng-template>

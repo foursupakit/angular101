@@ -1,0 +1,137 @@
+<header class="topbar">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="">
+          <img src="../assets/img/ss4.png" width="32" height="32">
+        </a>
+
+        <a role="button" id="navbar-burger" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" [routerLink]="['home']" (mouseover)="mouseOn()" (mouseout)="mouseOut()">Home</a>
+          <a class="navbar-item" [routerLink]="['about']">About</a>
+          <a class="navbar-item" [routerLink]="['contact']">Contact</a>
+          <a class="navbar-item" [routerLink]="['student-system']">Student</a>
+          <a class="navbar-item" [routerLink]="['404page']">404Page</a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">More</a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item">About</a>
+              <a class="navbar-item">Jobs</a>
+              <a class="navbar-item">Contact</a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">Report an issue</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary modal-trigger" data-modal="auth-modal">
+                <strong>Sign up</strong>
+              </a>
+              <a class="button is-light">
+                Log in
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div id="auth-modal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head is-primary">
+      <p class="modal-card-title">Sign Up</p>
+      <button class="delete close-modal" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <!-- Content ... -->
+      <div class="box">
+        <label class="label">Email</label>
+        <p class="control has-icon has-icon-right">
+          <input class="input" type="text" placeholder="jsmith@example.org" autocomplete="off">
+          <!--
+          <span class="icon is-small">
+            <i class="fa fa-warning"></i>
+          </span>
+          <span class="help is-danger">Error</span>
+          -->
+        </p>
+        <label class="label">Password</label>
+        <p class="control has-icon has-icon-right">
+          <input class="input" type="password" placeholder="●●●●●●●" autocomplete="off">
+        </p>
+        <hr>
+      </div>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-primary">Login</button>
+    </footer>
+  </div>
+
+<!--
+  <div class="modal-background"></div>
+  <section class="modal-content">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-6 is-offset-3">
+            <h1 class="title">
+              Login
+            </h1>
+
+            <p class="has-text-centered">
+              <a href="register.html">Register an Account</a>
+              |
+              <a href="#">Forgot password</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="modal-content">
+      <div class="flex-card auth-card">
+          <div class="tabs-wrapper">
+              <div class="tabs">
+                  <ul>
+                      <li class="is-active" data-tab="login-tab"><a>Login</a></li>
+                      <li data-tab="register-tab"><a>Register</a></li>
+                  </ul>
+              </div>
+              <div id="login-tab" class="tab-content is-active">
+                  <div class="field">
+                      <label>Username</label>
+                      <div class="control">
+                          <input type="text" class="input is-medium" placeholder="Enter username">
+                      </div>
+                  </div>
+                  <div class="field">
+                      <label>Password</label>
+                      <div class="control">
+                          <input type="password" class="input is-medium" placeholder="Enter password">
+                      </div>
+                  </div>
+
+                  <a class="button is-fullwidth secondary-btn is-rounded raised">Log in</a>
+              </div>
+          </div>
+      </div>
+  </div>
+-->
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>

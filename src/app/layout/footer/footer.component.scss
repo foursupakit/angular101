@@ -1,0 +1,38 @@
+.footer {
+  background-color: #fff;
+}
+.columns {
+  padding: 1em;
+}
+
+fa-icon.footer-title {
+  margin-right: 13px;
+}
+
+.font-21 {
+  font-size: 21px;
+}
+
+.inline-footer-title {
+  strong , .tags {
+    display: inline;
+  }
+}
+
+.footer-dark { background-color: #444F60;
+  .bd-footer-title , .tag.is-info , strong , .footer-title {
+    color: #fff;
+  }
+}
+
+.field.is-grouped.is-grouped-multiline:last-child {
+  margin-bottom: 0;
+}
+
+.bd-footer-star:hover {
+  box-shadow: 0 3rem 3rem -1.25rem rgba(10,10,10,.1);
+  transform: translateY(-.5rem);
+  .title , .subtitle , .subtitle strong {
+    color: #3273dc;
+  }
+}

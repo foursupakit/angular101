@@ -1,0 +1,60 @@
+.section {
+  /*background-image: url(https://ui-lib.com/wp-content/uploads/2018/10/single-download-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #fbfbfb;*/
+}
+
+.tabs {
+  box-shadow: 0 13px 27px -5px rgba(50,50,93,0.25), 0 8px 16px -8px rgba(0,0,0,0.3), 0 -6px 16px -6px rgba(0,0,0,0.025);
+  border-radius: 14px;
+}
+
+.tabs.is-boxed a:hover {
+  background-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.tabs.is-boxed li:not(:first-child) a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: 30px;
+  transition: background .7s;
+  outline: 0;
+  outline-color: transparent;
+  outline-style: none;
+  margin-left: 0px;
+  margin-right: 10px;
+  &:hover {
+    background-color: #fff;
+    border-bottom-color: inherit;
+    color: #333;
+  }
+}
+
+.tabs.is-boxed li.is-active a {
+  color: #333;
+  background-color: #fff;
+}
+
+ul.categories-list {
+  padding: 10px;
+  background-color: #333;
+  border: 0;
+}
+
+ul.categories-list .technology {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: white;
+}
+
+.level-item .field .control .button {
+  color: #fff;
+  background-color: #7a6af8;
+  border-color: #6f5ef8;
+}

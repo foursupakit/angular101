@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import '~bootstrap/dist/css/bootstrap.min.css'; */
+@import '~bulma/css/bulma.css';
+@import '~bulma-carousel/dist/css/bulma-carousel.min.css';
+
+body * {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.js body * {
+  cursor: none!important;
+}
+
+.cursor {
+  left: -5px;
+  top: -5px;
+  width: 15px;
+  height: 15px;
+  background-color: #f7f8fa;
+  mix-blend-mode: exclusion;
+  border-radius: 100%;
+}
+
+.cursor__follower {
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+  margin-top: -22px;
+  margin-left: -22px;
+  opacity: 0.1;
+  background-color: white;
+}
+
+.cursor {
+  position: fixed;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.cursor.is-hover {
+  transform: scale(.8);
+}
+
+
+
+
