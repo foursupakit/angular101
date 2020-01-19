@@ -14,6 +14,7 @@ if (environment.production) {
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 
+/*
 const root = document.querySelector('html');
 
 // Real cursor element
@@ -38,4 +39,4 @@ function setPosition(element, e) {
   element.style.left = `${e.clientX}px`;
   element.style.top = `${e.clientY}px`;
 }
-
+*/
